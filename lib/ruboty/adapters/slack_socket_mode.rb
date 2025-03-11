@@ -172,7 +172,7 @@ module Ruboty
       end
 
       def client
-        @client ||= ::Slack::Web::Client.new(token: slack_bot_token)
+        @client ||= ::Slack::Web::Client.new(token: slack_bot_token, adapter: :net_http)
       end
 
       def socket
