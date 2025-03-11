@@ -9,7 +9,9 @@ adapted new slack API(Socket Mode) instead of old API(RTM).
 ## ENV
 
 - `SLACK_APP_TOKEN`: Slack App-Level token for Socket Mode. get one on https://api.slack.com/apis/connections/socket#token
+    - required scopes: `connections:write`
 - `SLACK_BOT_TOKEN`: Slack OAuth token for using Web API. get one on https://api.slack.com/web#basics
+    - required scopes: `chat:write`, `app_mentions:read`, `users:read`, `channels:read`, `groups:read`, `im:read`, `mpim:read`, `usergroups:read`, `files:write`, `reactions:write`
 - `SLACK_EXPOSE_CHANNEL_NAME`: if this set to 1, `message.to` will be channel name instead of id (optional)
 - `SLACK_IGNORE_GENERAL`: if this set to 1, bot ignores all messages on #general channel (optional)
 - `SLACK_GENERAL_NAME`: Set general channel name if your Slack changes general name (optional)
